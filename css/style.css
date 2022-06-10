@@ -1,0 +1,445 @@
+/* переключаем цвет темы (тёмная/светлая), меняем цвета шрифтов */
+:root {
+    /* переменная */
+    --theme-accent: #ffc700;
+    --theme-main: #ffffff;
+    --theme-bgd: #222527;
+    --theme-modal-bgd: rgb(239 236 236 / 90%);
+    --theme-btn-text: #060803;
+  }
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    font-family: "Montserrat", sans-serif;
+  }
+  /* центрирование по ширине экрана */
+  .container {
+    /* max-width: 1170px; */
+    /* width: 100%; */
+    height: 100%;
+    margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+    /* центрирование по вертикали */
+    justify-content: space-between;
+    /* центрирование по горизонтали */
+    align-items: flex-start;
+    position: relative;
+  }
+  header {
+    padding: 32px 0 72px 0;
+    /* переключатель */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .about-social {
+    /* располагаем по вертикали */
+    display: flex;
+    flex-direction: column;
+    /* центрируем в центр */
+    align-items: center;
+    /* позиционируем вправо */
+    position: absolute;
+    right: 0;
+    top: 10%;
+  }
+  
+  .social-link {
+    margin-bottom: 26px;
+  }
+  
+  .social-link svg {
+    fill: var(--theme-accent);
+  }
+  .about {
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/space.jpg);
+    /* растягиваем фон на всю ширину*/
+    background-size: cover;
+    /* центрируем darth-vader-img согласно секции about*/
+    position: relative;
+    /* обрезаем всё, что ниже */
+    overflow: hidden;
+    /* эффект параллакса - при прокрутке фон остаётся на месте*/
+    background-attachment: fixed;
+  }
+  .about-name {
+    /* вместо цвета ссылаемся на переменную */
+    color: var(--theme-accent);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 60px;
+    margin-bottom: 24px;
+  }
+  .about-profession {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    color: var(--theme-main);
+  }
+  .about-positions {
+    font-size: 16px;
+    line-height: 24px;
+    /* цвет точек */
+    color: var(--theme-accent);
+    margin-bottom: 8px;
+    margin-left: 18px;
+    /* проставляем точки в списке */
+    list-style: disc;
+  }
+  .about-positions-text {
+    /* цвет списка */
+    color: var(--theme-main);
+  }
+  .about-button {
+    border: 0;
+    outline: 0;
+    padding: 16px 32px 16px 32px;
+    background: var(--theme-accent);
+    border-radius: 38px;
+    margin-top: 24px;
+    /* при наведении курсора на кнопку он меняется на ладонь */
+    cursor: pointer;
+    color: var(--theme-btn-text);
+  }
+  .about-description {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-main);
+  }
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    /* центрирование по горизонтали */
+    align-items: flex-start;
+  }
+  .about-content-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* растягиваем на всю ширину */
+    width: 100%;
+    justify-content: space-between;
+    /* центрирование по горизонтали к низу*/
+    align-items: flex-end;
+    margin-bottom: 60px;
+  }
+  .darth-vader-img {
+    position: absolute;
+    /* нижний правый угол */
+    right: 0px;
+    bottom: 0;
+  }
+  .death-star-img {
+    position: absolute;
+    /* центрируем по центру */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    bottom: -96px;
+    opacity: 0.4;
+  }
+  .achievements {
+    padding: 60px 0;
+    background-color: var(--theme-bgd);
+  }
+  
+  .achievements-header {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-accent);
+    margin-bottom: 60px;
+  }
+  
+  .achievements-icon {
+    width: 60px;
+    height: 60px;
+  }
+  .achievements-items {
+    /* элементы в ряд */
+    display: flex;
+    flex-direction: row;
+    /* рассредоточеные на всю ширину*/
+    justify-content: space-between;
+    width: 100%;
+  }
+  .achievements-item-header {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-accent);
+    margin: 32px 0 4px 0;
+  }
+  .achievements-item-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-main);
+  }
+  .achievements-item {
+    /* width: 25%; */
+    width: 20%;
+  }
+  .codex {
+    padding: 186px 0;
+    background-image: url(../img/space.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .codex .container {
+    flex-direction: row;
+  }
+  .codex-motto {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 60px;
+    color: var(--theme-accent);
+  }
+  .codex-left-side,
+  .codex-right-side {
+    width: 50%;
+  }
+  .codex-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-accent);
+    margin-bottom: 32px;
+  }
+  
+  .codex-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-main);
+    margin-bottom: 4px;
+  }
+  .codex-text--last {
+    margin-bottom: 60px;
+    color: var(--theme-main);
+  }
+  .footer {
+    padding-top: 60px 0 66px 0;
+    background-color: var(--theme-bgd);
+  }
+  .footer .container {
+    /* центрируем */
+    align-items: center;
+  }
+  
+  .footer-title {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-main);
+    /* центрируем текст */
+    text-align: center;
+    /* width: 740px; */
+    max-width: 740px;
+    margin-bottom: 60px;
+  }
+  .footer svg {
+    margin-bottom: 30px;
+  }
+  
+  .modal-container {
+    /* фиксация согласно экрана, а не других элементов */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--theme-modal-bgd);
+    /* центрируем */
+    display: flex;
+    /* по горизонтали */
+    justify-content: center;
+    /* по вертикали */
+    align-items: center;
+    /* по умолчанию спрятан */
+    opacity: 0;
+    /* деактивируем все события мышкой */
+    pointer-events: none;
+    /* добавляем анимацию */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .modal-form {
+    padding: 40px 80px;
+    background-color: var(--theme-bgd);
+    /* позиционирование относительно этого элемента */
+    position: relative;
+    /* центрируем кнопку */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .close-icon {
+    /* позиционирование элемента */
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .modal-form-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-accent);
+    margin-bottom: 4px;
+    text-align: center;
+  }
+  
+  .modal-form-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-main);
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  .modal-form-field {
+    /* располагаем по вертикали */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+  .modal-form-field-lable {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 4px;
+    color: var(--theme-main);
+  }
+  .modal-form-name,
+  .modal-form-email {
+    width: 440px;
+    height: 40px;
+    border: 1px solid var(--theme-main);
+    outline: none;
+    padding: 4px;
+    /* чтобы отступы не раздвигали форму */
+    box-sizing: border-box;
+  }
+  
+  .modal-form-submit {
+    border: 0;
+    outline: 0;
+    padding: 16px 32px 16px 32px;
+    background: var(--theme-accent);
+    border-radius: 38px;
+    margin-top: 16px;
+    /* при наведении курсора на кнопку он меняется на ладонь */
+    cursor: pointer;
+    color: var(--theme-btn-text);
+  }
+  .modal-active {
+    /* элемент появляется */
+    opacity: 1;
+    /* активируем все события мышкой */
+    pointer-events: all;
+  }
+  
+  .modal-success {
+    padding: 80px 40px 80px 40px;
+    background-color: var(--theme-bgd);
+    /* позиционирование относительно этого элемента */
+    position: relative;
+    /* центрируем кнопку */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+  }
+  
+  .modal-success-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-accent);
+    margin-bottom: 112px;
+    text-align: center;
+  }
+  .modal-success-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--theme-main);
+    margin-bottom: 36px;
+    text-align: center;
+  }
+  /* меняем цвет при смене темы с тёмной на светлую */
+  .logo svg,
+  .achievements-icon svg,
+  .footer svg,
+  .modal-success-icon svg {
+    fill: var(--theme-accent);
+  }
+  .close-icon svg {
+    fill: var(--theme-main);
+  }
+  
+  @media(max-width: 768px) {
+    .codex-motto {
+      font-size: 42px;
+    }
+  }
+  @media(max-width: 576px) {
+    .about-description {
+      padding-right: 20px;
+    }
+  }
+  .achievements-items {
+    flex-wrap: wrap;
+  }
+  .achievements-items > div {
+    width: 50%;
+  }
+  .achievements-item p {
+    padding-right: 25px;
+  }
+  .codex-motto {
+    font-size: 40px;
+    padding-right: 30px;
+  }
+  @media(max-width: 320px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+  .logo svg {
+    margin-bottom: 30px;
+  }
+  .about-name {
+    font-size: 38px;
+  }
+  .about-content {
+    margin-bottom: 30px;
+  }
+  .about-description {
+    padding-right: 50px;
+  }
+  .achievements-header,
+  .achievements-items {
+    margin-left: -10%;
+  }
+  .achievements-items>div {
+    width: 40%;
+  }
+  .codex .container {
+    flex-direction: column;
+  }
+  .codex-left-side,
+  .codex-right-side {
+    width: 100%;
+  }
+  }
