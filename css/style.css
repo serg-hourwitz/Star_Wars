@@ -411,6 +411,13 @@
     font-size: 40px;
     padding-right: 30px;
   }
+  .modal-form {
+    width: 50%;
+  }
+  .modal-form-name,
+  .modal-form-email {
+    width: 290px;
+  }
   @media(max-width: 320px) {
     header {
       flex-direction: column;
@@ -440,5 +447,12 @@
     .codex-left-side,
     .codex-right-side {
       width: 100%;
+    }
+    .modal-form {
+      width: 40%;
+    }
+    .modal-form-name,
+    .modal-form-email {
+      width: 260px;
     }
   }
