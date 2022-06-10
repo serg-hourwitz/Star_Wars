@@ -416,30 +416,29 @@
       flex-direction: column;
       align-items: center;
     }
-  .logo svg {
-    margin-bottom: 30px;
-  }
-  .about-name {
-    font-size: 38px;
-  }
-  .about-content {
-    margin-bottom: 30px;
-  }
-  .about-description {
-    padding-right: 50px;
-  }
-  .achievements-header,
-  .achievements-items {
-    margin-left: -10%;
-  }
-  .achievements-items>div {
-    width: 40%;
-  }
-  .codex .container {
-    flex-direction: column;
-  }
-  .codex-left-side,
-  .codex-right-side {
-    width: 100%;
-  }
+    .logo svg {
+      margin-bottom: 30px;
+    }
+    .about-name {
+      font-size: 38px;
+    }
+    .about-content {
+      margin-bottom: 30px;
+    }
+    .about-description {
+      padding-right: 50px;
+    }
+    .achievements-items {
+      width: 90%;
+    } 
+    .achievements-items>div {
+      width: 40%;
+    }
+    .codex .container {
+      flex-direction: column;
+    }
+    .codex-left-side,
+    .codex-right-side {
+      width: 100%;
+    }
   }
