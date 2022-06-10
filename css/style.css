@@ -389,14 +389,13 @@
   }
   
   @media(max-width: 768px) {
-    .codex-motto {
-      font-size: 42px;
-    }
+  .codex-motto {
+    font-size: 42px;
+  }
   }
   @media(max-width: 576px) {
-    .about-description {
-      padding-right: 20px;
-    }
+  .about-description {
+    padding-right: 20px;
   }
   .achievements-items {
     flex-wrap: wrap;
@@ -417,6 +416,7 @@
   .modal-form-name,
   .modal-form-email {
     width: 290px;
+  }
   }
   @media(max-width: 320px) {
     header {
