@@ -403,6 +403,10 @@
   .achievements-items > div {
     width: 50%;
   }
+}
+.about-button {
+  margin-bottom: 30px;
+}
   .achievements-item p {
     padding-right: 25px;
   }
@@ -434,6 +438,10 @@
     }
     .about-description {
       padding-right: 50px;
+    }
+    }
+    .about-button {
+      margin-bottom: 40px;
     }
     .achievements-items {
       width: 90%;
